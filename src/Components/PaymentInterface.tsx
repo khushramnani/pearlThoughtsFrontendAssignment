@@ -4,7 +4,6 @@ import {
   CreditCardIcon, 
   CheckCircleIcon, 
   ExclamationTriangleIcon,
-  XMarkIcon,
   LockClosedIcon,
   ShieldCheckIcon
 } from '@heroicons/react/24/outline';
@@ -43,11 +42,9 @@ export const PaymentInterface = () => {
   const [errors, setErrors] = useState<ValidationErrors>({});
   const [isLoading, setIsLoading] = useState(false);
   const [paymentStatus, setPaymentStatus] = useState<'idle' | 'success' | 'error'>('idle');
-  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setIsVisible(true);
       gsap.fromTo('.payment-card', 
         { opacity: 0, y: 30, scale: 0.95 },
         { opacity: 1, y: 0, scale: 1, duration: 0.8, ease: "power2.out" }
@@ -174,7 +171,7 @@ export const PaymentInterface = () => {
           { scale: 1, opacity: 1, duration: 0.6, ease: "back.out(1.7)" }
         );
       }
-    } catch (error) {
+    } catch {
       setPaymentStatus('error');
     } finally {
       setIsLoading(false);
@@ -240,7 +237,7 @@ export const PaymentInterface = () => {
           </div>
           <div>
             <h3 className="text-2xl font-bold text-red-800 mb-2">Payment Failed</h3>
-            <p className="text-red-700">We couldn't process your payment. Please try again or use a different payment method.</p>
+            <p className="text-red-700">We couldn&apos;t process your payment. Please try again or use a different payment method.</p>
           </div>
           <div className="space-y-2">
             <p className="text-sm text-red-600">Error Code: ERR{Date.now()}</p>

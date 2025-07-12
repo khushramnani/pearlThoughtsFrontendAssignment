@@ -17,7 +17,6 @@ export const DashboardLayout: React.FC<DashboardLayoutProps> = ({
   onTabChange = () => {} 
 }) => {
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
   const layoutRef = useRef<HTMLDivElement>(null);
   const mainRef = useRef<HTMLElement>(null);
 
@@ -46,7 +45,6 @@ export const DashboardLayout: React.FC<DashboardLayoutProps> = ({
   useEffect(() => {
     const handleResize = () => {
       const mobile = window.innerWidth < 768;
-      setIsMobile(mobile);
       if (mobile && !sidebarCollapsed) {
         setSidebarCollapsed(true);
       }

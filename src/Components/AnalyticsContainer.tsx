@@ -5,7 +5,6 @@ import {
   ChartBarIcon, 
   CalendarIcon, 
   UserGroupIcon, 
-  ClockIcon,
   ChatBubbleLeftRightIcon,
   ArchiveBoxIcon,
   CheckCircleIcon,

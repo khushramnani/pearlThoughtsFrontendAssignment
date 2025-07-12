@@ -161,7 +161,7 @@ export const ScheduleTable = () => {
             <CalendarIcon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
           </div>
           <div className="min-w-0">
-            <h2 className="text-lg sm:text-xl font-semibold text-gray-900">Today's Schedule</h2>
+            <h2 className="text-lg sm:text-xl font-semibold text-gray-900">Today&apos;s Schedule</h2>
             <p className="text-sm text-gray-500">{scheduleData.length} lessons scheduled</p>
           </div>
         </div>

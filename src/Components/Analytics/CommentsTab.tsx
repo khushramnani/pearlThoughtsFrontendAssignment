@@ -1,5 +1,5 @@
 import React from 'react';
-import { ChatBubbleLeftRightIcon, StarIcon, UserIcon, ClockIcon } from '@heroicons/react/24/outline';
+import { ChatBubbleLeftRightIcon, StarIcon, ClockIcon } from '@heroicons/react/24/outline';
 
 const commentsData = [
   {
