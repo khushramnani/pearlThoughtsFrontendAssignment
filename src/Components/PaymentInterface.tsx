@@ -274,14 +274,14 @@ export const PaymentInterface = () => {
       <form onSubmit={handleSubmit} className="payment-form p-6 space-y-6">
         {/* Payment Method Selection */}
         <div>
-          <label className="block text-sm font-semibold text-gray-700 mb-3">Payment Method</label>
+          <label className="block text-sm font-semibold text-black mb-3">Payment Method</label>
           <div className="grid grid-cols-3 gap-2">
             {(['credit', 'debit', 'paypal'] as const).map((method) => (
               <button
                 key={method}
                 type="button"
                 onClick={() => setFormData(prev => ({ ...prev, paymentMethod: method }))}
-                className={`p-3 rounded-lg border-2 transition-all duration-200 ${
+                className={`p-3 text-black rounded-lg border-2 transition-all duration-200 ${
                   formData.paymentMethod === method
                     ? 'border-blue-500 bg-blue-50 text-blue-700'
                     : 'border-gray-200 hover:border-gray-300'
@@ -303,7 +303,7 @@ export const PaymentInterface = () => {
               name="amount"
               value={formData.amount}
               onChange={handleInputChange}
-              className={`w-full pl-8 pr-4 py-3 border-2 rounded-lg font-semibold text-lg transition-all duration-200 ${
+              className={`w-full pl-8 pr-4 py-3 border-2 rounded-lg font-semibold text-lg text-black transition-all duration-200 ${
                 errors.amount ? 'border-red-500 bg-red-50' : 'border-gray-200 focus:border-blue-500'
               }`}
               placeholder="0.00"
@@ -326,7 +326,7 @@ export const PaymentInterface = () => {
               name="cardNumber"
               value={formData.cardNumber}
               onChange={handleInputChange}
-              className={`w-full px-4 py-3 border-2 rounded-lg transition-all duration-200 ${
+              className={`w-full px-4 py-3 border-2 rounded-lg text-black transition-all duration-200 ${
                 errors.cardNumber ? 'border-red-500 bg-red-50' : 'border-gray-200 focus:border-blue-500'
               }`}
               placeholder="1234 5678 9012 3456"
@@ -354,7 +354,7 @@ export const PaymentInterface = () => {
               name="expiryDate"
               value={formData.expiryDate}
               onChange={handleInputChange}
-              className={`w-full px-4 py-3 border-2 rounded-lg transition-all duration-200 ${
+              className={`w-full px-4 py-3 border-2 rounded-lg text-black transition-all duration-200 ${
                 errors.expiryDate ? 'border-red-500 bg-red-50' : 'border-gray-200 focus:border-blue-500'
               }`}
               placeholder="MM/YY"
@@ -375,7 +375,7 @@ export const PaymentInterface = () => {
                 name="cvv"
                 value={formData.cvv}
                 onChange={handleInputChange}
-                className={`w-full px-4 py-3 border-2 rounded-lg transition-all duration-200 ${
+                className={`w-full px-4 py-3 border-2 rounded-lg text-black transition-all duration-200 ${
                   errors.cvv ? 'border-red-500 bg-red-50' : 'border-gray-200 focus:border-blue-500'
                 }`}
                 placeholder="123"
@@ -399,7 +399,7 @@ export const PaymentInterface = () => {
             name="cardholderName"
             value={formData.cardholderName}
             onChange={handleInputChange}
-            className={`w-full px-4 py-3 border-2 rounded-lg transition-all duration-200 ${
+            className={`w-full px-4 py-3 border-2 rounded-lg text-black transition-all duration-200 ${
               errors.cardholderName ? 'border-red-500 bg-red-50' : 'border-gray-200 focus:border-blue-500'
             }`}
             placeholder="John Doe"
@@ -420,7 +420,7 @@ export const PaymentInterface = () => {
             name="email"
             value={formData.email}
             onChange={handleInputChange}
-            className={`w-full px-4 py-3 border-2 rounded-lg transition-all duration-200 ${
+            className={`w-full px-4 py-3 border-2 rounded-lg text-black transition-all duration-200 ${
               errors.email ? 'border-red-500 bg-red-50' : 'border-gray-200 focus:border-blue-500'
             }`}
             placeholder="john@example.com"
